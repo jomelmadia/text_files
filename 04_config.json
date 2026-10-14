@@ -1,0 +1,44 @@
+{
+  "_vim_practice_4": "JSON. Exercises are listed in the _exercises array below.",
+  "_exercises": [
+    "1. Fix the trailing comma errors (hint: search with /,\\_s*[}\\]])",
+    "2. Change every \"localhost\" to \"db.internal\" with :%s/localhost/db.internal/g",
+    "3. Use f\" and ; to hop between quotes on a line, ci\" to change a value",
+    "4. Use % to jump between matching braces and brackets",
+    "5. Use da{ or di[ to delete a whole block or list",
+    "6. Use Ctrl-a / Ctrl-x on port numbers",
+    "7. Use :g/debug/d to delete every line containing debug",
+    "8. Reformat with gg=G, then try :%!python3 -m json.tool"
+  ],
+  "app": {
+    "name": "myapp",
+    "version": "1.4.2",
+    "debug": true,
+    "port": 8080,
+  },
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "name": "myapp_dev",
+    "pool": {
+      "min": 2,
+      "max": 10,
+    }
+  },
+  "cache": {
+    "host": "localhost",
+    "port": 6379,
+    "ttl_seconds": 300
+  },
+  "features": {
+    "new_dashboard": false,
+    "beta_search": true,
+    "debug_toolbar": true,
+    "dark_mode": false
+  },
+  "allowed_origins": [
+    "http://localhost:3000",
+    "http://localhost:8080",
+    "https://example.com",
+  ]
+}
